@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+
+    
+}
+.navbar {
+    display:flex;
+    justify-content: space-between; 
+    
+     
+    font-size: 20px;
+    color:white;
+    font-weight: 500px;
+    border-width: 20px;
+    top:0;
+    
+    width:100%;
+    height:100px;
+    align-items: center;
+    text-align: center;
+ 
+}
+.n{
+    display:flex;
+    margin-top: 5px;
+    
+    
+    
+}
+a{
+    margin:10px;
+    padding:25px;
+    color:white;
+    font-size: 20px;
+    
+    
+}
+
+
+ a:hover{
+    
+    background-color:white;
+    color: black;
+}
+body{
+    background-image: url("images/michal-parzuchowski-ItaV89TNkks-unsplash.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+.logo img{
+    
+    height:100px;
+    width:auto;
+    
+}
+
+.logo{
+    display: flex;
+    align-items:center;
+    gap: 2px;
+     
+     font-size: 35px;
+     margin-top: 10px;
+     color:rgb(207, 204, 200);
+     border-color: bisque;
+     font-family: Cambria;
+    
+    
+}
+.button1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+     
+}
+.button1 button{
+     padding: 12px 25px;
+     border-radius: 25px;
+     font-size: 17px;
+     background-color: rgb(216, 162, 62);
+     color:whitesmoke;
+     margin-top: 30px;
+
+}
+button:hover{
+    background-color: brown;
+
+}
+.hero{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height:100vh;
+    flex-direction: column;
+   
+}   
+.hero h1{
+    margin-bottom: 20px;
+    color:white;
+    font-weight: lighter;
+    font-style: italic;
+}
