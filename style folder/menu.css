@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-image: url("../images/chocolate-candies-brown-background.jpg");
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;  
+  font-family:Papyrus;
+  font-style:italic;
+  font-size: clamp(28px, 5vw, 50px);
+
+}
+.mainhead  {
+  display:flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 75px;
+  font-size:25px;
+}
+.mainhead p{
+  
+   padding:50px;
+   font-style:italic;
+   text-align: center;
+}
+body{
+  
+  background: rgb(196, 168, 127);
+}
+
+
+/* container holds LEFT + RIGHT */
+.menu-container{
+  width:80%;
+  margin:40px auto;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+}
+
+
+/* each side */
+.menu-left, .menu-right{
+  width:48%;
+}
+
+
+/* menu item */
+.menu-item{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+  justify-content: center;
+}
+
+
+.menu-item img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+}
+
+
+/* name + price line */
+.menu-item h3{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px dashed #999;
+  padding-bottom:5px;
+  font-weight:normal;
+}
+
+
+.menu-item p{
+  font-size:14px;
+  color:#555;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .menu-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .menu-left,
+  .menu-right {
+    width: 100%;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
