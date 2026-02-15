@@ -1,50 +1,60 @@
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style folder/style.css">
-    <title>e-cafe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style folder/style.css">
+  <title>e-cafe</title>
 </head>
+
 <body>
-    <header>
-        <nav>
+<header>
+  <nav>
+    <div class="navbar">
 
-        <div class="navbar">
-            <div class="logo">
-                <img src="../images/ORL2ZQ0-removebg-preview.jpg.png" alt="logo">
-                GRAND CAFE
+      <!-- LOGO (NO CHANGE) -->
+      <div class="logo">
+        <img src="../images/ORL2ZQ0-removebg-preview.jpg.png" alt="logo">
+        GRAND CAFE
+      </div>
 
-            </div>
-            <div class="navlinks">
-                <ul class="n">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#menu.html">Order</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#Aboutus">About US</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    
-                    
-                </ul>
-            </div>
-          
-            </div>
+      <!-- HAMBURGER ICON (NEW) -->
+      <div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
 
-        </nav>
-    </header>
+      <!-- NAV LINKS (SMALL CHANGE: add id) -->
+      <div class="navlinks">
+        <ul class="n" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="menu.html">Order</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+         
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
 
-    <main>
-        <div class="hero">
-        <h1 class="quote">" What goes best with a cup of</h1><br>
-        <h1 class="quote">coffee? Another cup."</h1>
+    </div>
+  </nav>
+</header>
 
-           <div class="button1">
-                <button>View Shop</button>
+<main>
+  <div class="hero">
+    <h1 class="quote">"What goes best with a cup of</h1>
+    <h1 class="quote">coffee? Another cup."</h1>
 
-            </div>
-            </div>
-            
-           
-    </main>
-    
+    <div class="button1">
+      <button>View Shop</button>
+    </div>
+  </div>
+</main>
 
+<!-- JAVASCRIPT (NEW, VERY SMALL) -->
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
 </html>
