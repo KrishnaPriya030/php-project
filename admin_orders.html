@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin - Orders</title>
+<link rel="stylesheet" href="admin_orders.css">
+
+<style>
+
+/* FILTER BUTTONS */
+
+.filter-box{
+text-align:center;
+margin-bottom:20px;
+}
+
+.filter-box button{
+padding:8px 15px;
+margin:5px;
+border:none;
+background:#6b4f2c;
+color:white;
+border-radius:4px;
+cursor:pointer;
+}
+
+.filter-box button:hover{
+background:#543b1f;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Customer Orders</h2>
+
+<div class="top-links">
+<a href="#">← Back to Menu</a>
+</div>
+
+<div class="filter-box">
+<button onclick="filterOrders('all')">All</button>
+<button onclick="filterOrders('Pending')">Pending</button>
+<button onclick="filterOrders('Accepted')">Accepted</button>
+<button onclick="filterOrders('Completed')">Completed</button>
+</div>
+
+
+<div class="order-box Pending">
+
+<h3>Order ID: 101</h3>
+
+<p><b>Customer:</b> John</p>
+<p><b>Phone:</b> 9876543210</p>
+<p><b>Total:</b> Rs. 420</p>
+
+<p>Status: <span class="status Pending">Pending</span></p>
+
+<ul>
+<li>Cappuccino × 2</li>
+<li>Sandwich × 1</li>
+</ul>
+
+<a class="action-btn" href="#">Accept</a>
+
+</div>
+
+
+<div class="order-box Accepted">
+
+<h3>Order ID: 102</h3>
+
+<p><b>Customer:</b> Priya</p>
+<p><b>Phone:</b> 9876500000</p>
+<p><b>Total:</b> Rs. 300</p>
+
+<p>Status: <span class="status Accepted">Accepted</span></p>
+
+<ul>
+<li>Latte × 1</li>
+<li>Brownie × 2</li>
+</ul>
+
+<a class="action-btn" href="#">Complete</a>
+
+</div>
+
+
+<div class="order-box Completed">
+
+<h3>Order ID: 103</h3>
+
+<p><b>Customer:</b> Rahul</p>
+<p><b>Phone:</b> 9123456789</p>
+<p><b>Total:</b> Rs. 250</p>
+
+<p>Status: <span class="status Completed">Completed</span></p>
+
+<ul>
+<li>Cold Coffee × 1</li>
+<li>Cake × 1</li>
+</ul>
+
+</div>
+
+
+<script>
+
+function filterOrders(status){
+
+let orders = document.querySelectorAll(".order-box");
+
+orders.forEach(order => {
+
+if(status === "all"){
+order.style.display = "block";
+}
+else if(order.classList.contains(status)){
+order.style.display = "block";
+}
+else{
+order.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

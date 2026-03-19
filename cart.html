@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Cart</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+text-decoration:none;
+list-style:none;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* BODY BACKGROUND */
+
+body{
+background-image:url("images/michal-parzuchowski-ItaV89TNkks-unsplash.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+/* HERO SECTION */
+
+.hero{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:80vh;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:20px;
+letter-spacing:1px;
+text-shadow:0 5px 15px rgba(0,0,0,0.6);
+}
+
+/* CART CARD */
+
+.cart-box{
+background:rgba(245, 151, 151, 0.15); /* transparent glass */
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(8px);
+
+padding:30px;
+width:420px;
+border-radius:15px;
+
+border:1px solid rgba(255,255,255,0.3);
+box-shadow:0 8px 32px rgba(0,0,0,0.3);
+
+margin-top:10px;
+transition:0.3s;
+}
+
+.cart-box:hover{
+transform:translateY(-6px);
+}
+
+/* CART ITEMS */
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+border-bottom:1px solid #eee;
+font-size:16px;
+border-color: #7b4b3a;
+}
+
+.cart-item:last-child{
+border-bottom:none;
+}
+
+/* ITEM NAME */
+
+.item-name{
+font-weight:bold;
+color:#4b2e2b;
+font-size:17px;
+}
+
+/* ITEM PRICE */
+
+.item-price{
+color:#333;
+font-weight:500;
+}
+
+/* TOTAL SECTION */
+
+.total{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+text-align:right;
+color:#4b2e2b;
+border-top:2px solid #eee;
+padding-top:10px;
+}
+
+/* CHECKOUT BUTTON */
+
+.cart-btn{
+display:block;
+margin-top:25px;
+padding:14px;
+background:linear-gradient(45deg,#4b2e2b,#7b4b3a);
+color:white;
+text-align:center;
+border-radius:10px;
+font-size:17px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.cart-btn:hover{
+background:#c99d61;
+color:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<div class="navbar">
+
+<div class="logo">
+<img src="images/ORL2ZQ0-removebg-preview.jpg.png">
+GRAND CAFE
+</div>
+
+<ul class="n">
+
+<li><a href="#">Login</a></li>
+<li><a href="#">Home</a></li>
+
+<li class="dropdown">
+<a href="#">Reserve</a>
+<ul class="dropdown-menu">
+<li><a href="#">Reserve Table</a></li>
+<li><a href="#">Track Reservation</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#">Order</a>
+<ul class="dropdown-menu">
+<li><a href="#">Order Item</a></li>
+<li><a href="#">Track Order</a></li>
+</ul>
+</li>
+
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+</header>
+
+
+<div class="hero">
+
+<h1>Your Cart</h1>
+
+<div class="cart-box">
+
+<div class="cart-item">
+<span class="item-name"> Cold coffee</span>
+<span class="item-price">Qty: 2 | Rs. 240</span>
+</div>
+
+<div class="cart-item">
+<span class="item-name">Marshmellow</span>
+<span class="item-price">Qty: 1 | Rs. 120</span>
+</div>
+
+<div class="cart-item">
+<span class="item-name">Hot coffee</span>
+<span class="item-price">Qty: 1 | Rs. 150</span>
+</div>
+
+<div class="total">
+Total Amount: Rs. 510
+</div>
+
+<a class="cart-btn" href="#">Proceed to Checkout</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

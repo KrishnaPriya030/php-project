@@ -1,0 +1,85 @@
+body{
+font-family:Arial, sans-serif;
+background:#c99d61;
+margin:0;
+padding:20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:10px;
+}
+
+.top-links{
+text-align:center;
+margin-bottom:25px;
+}
+
+.top-links a{
+text-decoration:none;
+color:#6b4f2c;
+font-weight:bold;
+}
+
+.order-box{
+background:#ffffff;
+padding:18px 22px;
+margin-bottom:25px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.15);
+max-width:500px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.order-box h3{
+margin-top:0;
+color:#3e2723;
+}
+
+.order-box p{
+margin:6px 0;
+}
+
+ul{
+margin-top:8px;
+padding-left:20px;
+}
+
+.status{
+font-weight:bold;
+padding:4px 10px;
+border-radius:4px;
+display:inline-block;
+}
+
+.Pending{
+background:#ffebcc;
+color:#cc7a00;
+}
+
+.Accepted{
+background:#d4edda;
+color:#155724;
+}
+
+.Completed{
+background:#cce5ff;
+color:#004085;
+}
+
+.action-btn{
+display:inline-block;
+margin-top:10px;
+margin-right:10px;
+padding:6px 14px;
+background:#6b4f2c;
+color:#ffffff;
+text-decoration:none;
+border-radius:4px;
+font-size:14px;
+}
+
+.action-btn:hover{
+background:#543b1f;
+}

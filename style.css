@@ -1,0 +1,223 @@
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        font-weight: bold;
+
+        
+    }
+    
+    .navbar {
+        display:flex;
+        justify-content: space-between; 
+
+        
+        
+        font-size: 15px;
+        color:white;
+        font-weight: 500px;
+        border-width: 12px;
+        top:0;
+        
+        width:100%;
+        height:100px;
+        align-items: center;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+    
+    }
+    .n{
+        display:flex;
+        margin-top: 30px;
+        
+        
+        
+    }
+    a{
+        margin:10px;
+        padding:10px;
+        color:rgb(255, 255, 255);
+        font-size: 20px;
+        
+        
+    }
+
+
+    a:hover{
+        
+        background-color: rgb(216, 162, 62);;
+        color: black;
+        border-radius: 12px;
+    }
+    body{
+        background-image: url("images/michal-parzuchowski-ItaV89TNkks-unsplash.jpg");
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+    }
+    .logo img{
+        
+        height:100px;
+        width:auto;
+        
+    }
+
+    .logo{
+        display: flex;
+        align-items:center;
+        gap: 2px;
+        
+        font-size: 30px;
+        margin-top: 10px;
+        color:rgb(248, 235, 218);
+        -webkit-text-stroke: 0.5px rgb(75, 8, 8);
+        border-color: bisque;
+        font-family: Bodoni;
+        
+        
+    }
+    .button1{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
+    }
+    .button1 button{
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-size: 17px;
+        background-color: rgb(216, 162, 62);
+        color:whitesmoke;
+       
+    
+        margin-top: 30px;
+
+    }
+    button:hover{
+        background-color: brown;
+
+    }
+    .hero{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height:100vh;
+        flex-direction: column;
+    
+    }   
+    .hero h1{
+        margin-bottom: 20px;
+        color:white;
+        font-weight: lighter;
+        font-style: italic;
+    }
+    .hamburger{
+        display:none;
+        font-size:25px;
+    }
+    /* Dropdown menu */
+
+.dropdown {
+position: relative;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+background: #c99d61;
+list-style:square;
+padding: 20px;
+top: 30px;
+left: 0;
+box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu li {
+padding: 12px;
+}
+
+.dropdown-menu li a {
+text-decoration: none;
+color: black;
+
+}
+
+/* Show dropdown on hover */
+
+.dropdown:hover .dropdown-menu {
+display:block;
+border-radius: 12px;
+
+}
+.dropdown-menu li a{
+    white-space: nowrap;
+}
+    footer{
+    background-color:#222;
+    color:white;
+    text-align:center;
+    padding:30px 10px;
+}
+
+footer{
+    background-color:#4b2e2b;   /* dark coffee brown */
+    color:#f5e6d3;              /* cream coffee color */
+    text-align:center;
+    padding:30px 10px;
+}
+
+footer h3{
+    color:#d9a066;              /* latte color */
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer a{
+    color:#d9a066;
+}
+
+footer a:hover{
+    color:#110808;
+}
+
+.social a{
+    color:#f4c542;
+    text-decoration:none;
+    margin:0 5px;
+}
+
+.social a:hover{
+    text-decoration:underline;
+}
+    @media(max-width:800px){
+    .hamburger{
+        display:block;
+        margin:50px;
+    }
+    .n{
+        display:none;
+        flex-direction: column;
+        gap:20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .n.show{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding:20px;
+    }
+    .navbar {
+        display:flex;
+        justify-content: space-between; 
+
+    }
+    
+
+    }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manage Menu</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="manage_menu.css">
+<link rel="stylesheet" href="ad_css.css">
+
+</head>
+
+<body>
+
+<!-- ✅ ADMIN NAVBAR -->
+<header>
+<nav>
+<div class="page-wrapper">
+
+    <!-- your full page content -->
+    
+
+<div class="navbar">
+
+<!-- LOGO -->
+<div class="logo">
+<img src="images/ORL2ZQ0-removebg-preview.jpg.png" alt="logo">
+GRAND CAFE
+</div>
+
+<!-- HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- NAV LINKS -->
+<ul class="navlinks" id="navLinks">
+
+<li><a href="admin_home.html">Home</a></li>
+<li><a href="manage_menu.html">Manage Menu</a></li>
+<li><a href="orders.html">Orders</a></li>
+<li><a href="reservations.html">Reservations</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="../customer/home.html">Logout</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+</header>
+
+
+<!-- ✅ MAIN CONTENT -->
+<div class="overlay">
+
+<h1 class="title">Manage Menu</h1>
+
+<!-- ADMIN FORM -->
+<div class="admin-panel">
+
+<input type="text" id="name" placeholder="Item Name">
+<input type="number" id="price" placeholder="Price">
+<input type="number" id="qty" placeholder="Quantity">
+
+<input type="file" id="image">
+
+<img id="preview" />
+
+<button onclick="addItem()">Add Item</button>
+
+</div>
+
+<!-- MENU LIST -->
+<div id="menuList" class="menu-grid"></div>
+
+</div>
+
+
+    <!-- your full page content -->
+    
+</div>
+
+
+<!-- ✅ JS -->
+<script src="manage_menu.js"></script>
+
+<script>
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+font-family:Arial, sans-serif;
+background-image:url("images/michal-parzuchowski-ItaV89TNkks-unsplash.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* OVERLAY DARK EFFECT */
+
+.gallery{
+background:rgba(0,0,0,0.6);
+min-height:100vh;
+padding:40px 20px;
+text-align:center;
+}
+
+/* TITLE */
+
+.gallery-title{
+color:white;
+font-size:40px;
+margin-bottom:30px;
+letter-spacing:2px;
+text-shadow:0 5px 15px rgba(0,0,0,0.6);
+}
+
+/* GRID */
+
+.gallery-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+/* IMAGE CARD */
+
+.gallery-container img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* HOVER EFFECT */
+
+.gallery-container img:hover{
+transform:scale(1.1);
+box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* GLASS BORDER EFFECT */
+
+.gallery-container img{
+border:2px solid rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+}
+
+/* OPTIONAL: FADE-IN ANIMATION */
+
+.gallery-container img{
+opacity:0;
+transform:translateY(30px);
+animation:fadeIn 0.8s forwards;
+}
+
+.gallery-container img:nth-child(1){animation-delay:0.1s;}
+.gallery-container img:nth-child(2){animation-delay:0.2s;}
+.gallery-container img:nth-child(3){animation-delay:0.3s;}
+.gallery-container img:nth-child(4){animation-delay:0.4s;}
+.gallery-container img:nth-child(5){animation-delay:0.5s;}
+.gallery-container img:nth-child(6){animation-delay:0.6s;}
+
+@keyframes fadeIn{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}

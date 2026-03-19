@@ -1,0 +1,54 @@
+body{
+    background-image: url("images/alexei-maridashvili-3QmiYAeJy6s-unsplash.jpg");
+}
+.reserve-container{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:80vh;
+padding:20px;
+}
+
+.reserve-box{
+background:white;
+padding:35px;
+width:420px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+.reserve-box h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+.reserve-box label{
+display:block;
+margin-bottom:6px;
+font-weight:bold;
+}
+
+.reserve-box input,
+.reserve-box select{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+.reserve-box button{
+width:100%;
+padding:12px;
+background:#4b340a;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+.reserve-box button:hover{
+background:#a57c45;
+}

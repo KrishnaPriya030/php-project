@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Menu</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c79a63;
+}
+
+/* Header */
+.header {
+    background: #4b2e2e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+}
+
+.cart {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title h1 {
+    font-family: cursive;
+}
+
+/* Menu Grid */
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: #eee;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+/* Content */
+.details {
+    flex: 1;
+}
+
+.price {
+    float: right;
+    font-weight: bold;
+}
+
+.stock {
+    font-size: 12px;
+    color: green;
+}
+
+/* Controls */
+.controls {
+    margin-top: 8px;
+}
+
+input {
+    width: 40px;
+    padding: 5px;
+}
+
+button {
+    background: #6b4f3f;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #5a3e30;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    Our Menu
+    <div class="cart">View Cart 🛒</div>
+</div>
+
+<div class="title">
+    <h1>HOT BEVERAGES</h1>
+    <p>Enjoy the perfect cup—cozy, comforting, and full of flavor.</p>
+</div>
+
+<div class="menu-container" id="menu"></div>
+
+<script>
+const menuItems = [
+    {
+        name: "Caffe Latte",
+        price: 35,
+        stock: 5,
+        img: "images/cups-coffee.jpg",
+        desc: "Fresh brewed coffee and steamed milk"
+    },
+    {
+        name: "Cold Coffee",
+        price: 45,
+        stock: 3,
+        img: "images/close-up-latte-art.jpg",
+        desc: "Chilled milk, coffee, sugar, and ice"
+    },
+    {
+        name: "Mocha",
+        price: 50,
+        stock: 4,
+        img: "images/close-up-latte-art (1).jpg",
+        desc: "Espresso with chocolate and cream"
+    },
+    {
+        name: "Caramel Latte",
+        price: 45,
+        stock: 2,
+        img: "images/hot-chocolate-with-marshmallows-recipe.jpg",
+        desc: "Sweet latte with caramel syrup"
+    },
+    {
+        name: "Iced Latte",
+        price: 25,
+        stock: 6,
+        img: "images/top-view-coffee-cup-with-cookies-cinnamon-nuts-black-tray.jpg",
+        desc: "Cold coffee with espresso and milk"
+    }
+];
+
+const menuDiv = document.getElementById("menu");
+
+menuItems.forEach((item, index) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+        <img src="${item.img}" alt="">
+        <div class="details">
+            <strong>${item.name}</strong>
+            <span class="price">Rs.${item.price}</span>
+            <p>${item.desc}</p>
+            <p class="stock">Available: <span id="stock-${index}">${item.stock}</span></p>
+
+            <div class="controls">
+                <input type="number" id="qty-${index}" value="1" min="1">
+                <button onclick="addToCart(${index})">Add to Cart</button>
+            </div>
+        </div>
+    `;
+
+    menuDiv.appendChild(card);
+});
+
+function addToCart(index) {
+    let qty = parseInt(document.getElementById(`qty-${index}`).value);
+    let item = menuItems[index];
+
+    if (qty > item.stock) {
+        alert("Not enough stock available!");
+        return;
+    }
+
+    item.stock -= qty;
+
+    document.getElementById(`stock-${index}`).innerText = item.stock;
+
+    alert(item.name + " added to cart!");
+}
+</script>
+
+</body>
+</html>
