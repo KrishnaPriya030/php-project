@@ -1,0 +1,826 @@
+
+*{box-sizing:border-box}
+body {
+    margin: 0;
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+/* APPLY ONLY WHEN NEEDED */
+.inner-page {
+    background-color: #f5f1ea;
+}
+body{margin:0;background:#f5f1ea;color:#333}
+
+/* NAV */
+.navbar{
+  background:rgba(75,46,46,.95);
+  padding:14px 20px;
+  display:flex;gap:24px;justify-content:center;position:sticky;top:0;z-index:10
+}
+.navbar a{color:#fff;text-decoration:none;font-weight:600;letter-spacing:.3px}
+.navbar a:hover{opacity:.85}
+
+/* HERO */
+.hero{
+  height:70vh;
+  background:url('https://images.wallpaperscraft.com/image/single/cafe_sign_signboard_116510_1366x768.jpg') center/cover no-repeat;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:44px;font-weight:700;text-shadow:0 2px 6px rgba(0,0,0,.6)
+font-family:Cursive;
+
+}
+.coffee-quote {
+    font-style: italic;
+    color: black;
+    font-size: 30px;
+    margin:auto 15px;
+    letter-spacing: 1px;
+text-align:center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTAINERS */
+.container{width:92%;max-width:1100px;margin:24px auto}
+
+.grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+
+/* CARD */
+.card{
+  background:#fff;border-radius:14px;padding:16px 16px 18px;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);width:230px;text-align:center
+}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+.card h3{margin:8px 0 6px}
+.card p{margin:0 0 10px}
+
+/* TABLE TILES */
+/* ===== TABLE GRID ===== */
+.table-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* increase spacing */
+  justify-content: center;
+}
+
+/* ===== TABLE CARD ===== */
+.table-card {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== TEXT ===== */
+.table-card strong {
+  font-size: 15px;
+}
+
+.table-card small {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* ===== STATUS COLORS ===== */
+
+.table-card.available { background: #43a047 !important; }
+.table-card.pending  { background: #f4b400 !important; }
+.table-card.reserved { background: #d9534f !important; }
+
+/* ===== HOVER EFFECT ===== */
+.table-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ===== LARGE TABLES (RECTANGLE) ===== */
+.table-card.large {
+  border-radius: 12px;
+  width: 130px;
+  height: 90px;
+}
+
+/* DEFAULT (circle - small tables) */
+.table-card.circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+/* RECTANGLE (big tables) */
+.table-card.rect {
+  width: 130px;
+  height: 90px;
+  border-radius: 12px;
+}
+
+/* FORMS */
+.form{background:#fff;border-radius:12px;padding:16px;max-width:420px;margin:20px auto;
+      box-shadow:0 6px 18px rgba(0,0,0,.12);text-align: center;}
+.form input,.form select,.form textarea{
+  width:100%;padding:10px;margin:8px 0;border:1px solid #ddd;border-radius:8px
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;background:#6f4e37;color:#fff;border:none;border-radius:8px;
+  padding:10px 14px;cursor:pointer;text-decoration:none
+}
+.btn.secondary{background:#8a6b57;}
+.btn.danger{background:#c0392b}
+
+/* TABLE */
+.table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}
+.table th,.table td{padding:10px;border-bottom:1px solid #eee;text-align:center}
+.table th{background:#4b2e2e;color:#fff}
+
+/* BADGE */
+.badge{padding:4px 8px;border-radius:6px;color:#fff;font-size:12px}
+.b-pending{background:#f39c12}
+.b-approved{background:#3498db}
+.b-completed{background:#27ae60}
+.b-cancelled{background:#7f8c8d}
+/* ===== HERO SECTION ===== */
+.hero-customer {
+  height: 100vh;
+  
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('uploads/ecafe7.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-customer .tagline {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+.hero-customer h1 {
+  font-size: 72px !important;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* CONTENT */
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* TITLE */
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* TAGLINE */
+.tagline {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  padding: 10px 20px;
+  background: #ff6b6b;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #ff3b3b;
+}
+
+/* SECONDARY BUTTON */
+.btn-secondary {
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+.cart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 70px;
+    border-radius: 8px;
+}
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    background: #6f4e37;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.qty-btn:hover {
+    background: #4b2e2e;
+}
+
+.remove-btn {
+    background: #c0392b;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.remove-btn:hover {
+    background: #922b21;
+}
+
+.total {
+    text-align: right;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ===== PREMIUM CARD ===== */
+.card {
+    width: 240px;
+    padding: 25px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Card title */
+.card h3 {
+    margin-bottom: 10px;
+    color: #4b2e2e;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #6f4e37;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #4b2e2e;
+}
+
+/* Container spacing */
+.container {
+    padding: 30px;
+}
+
+
+.admin-hero {
+    height: 70vh;
+
+    /* Freepik-style coffee background */
+    background:url('https://images.wallpaperscraft.com/image/single/coffee_cup_book_172807_1366x768.jpg') center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+}
+
+.admin-hero h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+font-family:Cursive;
+font-weight:italic;
+    
+}
+
+.admin-hero p {
+    font-size: 18px;
+margin-top: 10px;
+}
+
+
+/* CONTACT HERO */
+.contact-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('uploads/ecafe8.jpeg') center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* CONTACT CARD */
+.contact-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    margin: -60px auto 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.badge {
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+}
+
+.b-pending { background: orange; }
+.b-approved { background: blue; }
+.b-completed { background: green; }
+.b-cancelled { background: gray; }
+/* MENU CARD */
+.menu-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.stock {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.in-stock { color: green; }
+.out-stock { color: red; }
+
+.add-btn {
+    background: #6f4e37;
+    width: 100%;
+}
+.cart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 70px;
+    border-radius: 8px;
+}
+
+.total {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+.payment-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.payment-box h1 {
+    margin: 10px 0;
+    color: #6f4e37;
+}
+
+.pay-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+/* CART BOX */
+.cart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* CART ITEM */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 70px;
+    border-radius: 8px;
+}
+
+/* QUANTITY */
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    background: #6f4e37;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.qty-btn:hover {
+    background: #4b2e2e;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+    background: #c0392b;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.remove-btn:hover {
+    background: #922b21;
+}
+
+.total {
+    text-align: right;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6f4e37;
+}
+/* FIX TEXT VISIBILITY */
+.table-card {
+    color: #333; /* dark text */
+}
+
+/* CAPACITY */
+.capacity {
+    color: #444;
+    font-weight: bold;
+}
+
+/* STATUS COLORS */
+.status {
+    font-weight: bold;
+}
+
+/* AVAILABLE → GREEN */
+.available .status {
+    color: green;
+}
+
+/* RESERVED → RED */
+.reserved .status {
+    color: red;
+}
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.table th {
+    background: #6f4e37;
+    color: white;
+}
+
+.danger {
+    background: #c0392b;
+}
+.title {
+    text-align: center;
+    color: #6f4e37;
+    margin-bottom: 25px;
+}
+
+/* GRID */
+/* .table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+} */
+
+/* CARD */
+.table-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.table-card:hover {
+    transform: scale(1.05);
+}
+
+/* TABLE VISUAL */
+.table-circle {
+    width: 70px;
+    height: 70px;
+    background: #6f4e37;
+    color: white;
+    border-radius: 50%;
+    line-height: 70px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* STATUS COLORS */
+.table-card.available {
+    border-top: 5px solid green;
+}
+
+.table-card.reserved {
+    border-top: 5px solid red;
+}
+
+/* TEXT */
+.capacity {
+    margin: 10px 0;
+}
+
+.status {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.book-btn {
+    background: #6f4e37;
+    width: 100%;
+}
+
+.disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+.receipt {
+    text-align: center;
+}
+
+.receipt-box {
+    background: #fff;
+    padding: 25px;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.receipt-box p {
+    margin: 10px 0;
+    font-size: 16px;
+}.feedback-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.feedback-form textarea,
+.feedback-form select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.feedback-list {
+    margin-top: 30px;
+}
+
+.feedback-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.feedback-card h3 {
+    color: #6f4e37;
+}
+
+.rating {
+    color: gold;
+    font-size: 18px;
+}
+.contact-box h3 {
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* BACKGROUND */
+.split-hero {
+  height: 100vh;
+  background: url('uploads/ecafe7.png') center/cover no-repeat;
+  display: flex;
+}
+
+/* PANELS */
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+  padding: 30px;
+
+  backdrop-filter: blur(8px);
+}
+
+/* LEFT DARK */
+.panel.left {
+  background: rgba(0,0,0,0.6);
+}
+
+/* RIGHT LIGHT */
+.panel.right {
+  background: rgba(0,0,0,0.4);
+}
+
+/* TEXT */
+.panel h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.panel p {
+  margin-bottom: 15px;
+}
+
+/* HOVER EFFECT */
+.panel:hover {
+  background: rgba(0,0,0,0.75);
+  transition: 0.3s;
+}
+
+.login-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
